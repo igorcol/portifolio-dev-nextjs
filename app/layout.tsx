@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="custom_scrollbar">
       <body className={`${soraFont.className} antialiased`}>
         <div className="hidden md:block">
           <AnimatedCursor
