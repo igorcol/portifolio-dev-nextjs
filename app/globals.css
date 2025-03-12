@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+@layer components {
+    
+    .nav__link {
+      @apply relative text-base font-medium w-fit block text-white
+    }
+    .nav__link::after {
+      @apply block content-[''] absolute h-[3px] bg-yellow-400 w-full scale-x-0 transition duration-300 origin-right
+    }
+    .nav__link:hover::after {
+      @apply scale-x-100
+    }
+  }
