@@ -4,14 +4,14 @@ import Nav from './Nav'
 import MobileNav from './MobileNav'
 
 const ResponsiveNav = () => {
-    const [showNav, setShowNav] = useState(false) 
+  const [showNav, setShowNav] = useState(false)
 
-    function showNavHandler() { setShowNav(true) }
-    function closeNavHandler() { setShowNav(false) }
+  function showNavHandler() { setShowNav(true) }
+  function closeNavHandler() { setShowNav(false) }
 
   return (
     <div>
-      <Nav openNav={showNavHandler}/>
+      <Nav openNav={showNavHandler} />
       <MobileNav showNav={showNav} closeNav={closeNavHandler} />
     </div>
   )
