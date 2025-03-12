@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
+import Footer from "@/components/Home/Footer/Footer";
 
 const soraFont = Sora({
   weight: ['100', '200', '300', '400',  '500', '600', '700', '800'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${soraFont.className} antialiased`} >
         <ResponsiveNav/>
         {children}
+        <Footer />
       </body>
     </html>
   );
