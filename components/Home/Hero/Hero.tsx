@@ -19,8 +19,8 @@ const Hero = () => {
                         {BaseInfo.position}
                     </h1>
                     {/* Description */}
-                    <p className='mt-6 text-sm md:text-base text-white opacity-60'>
-                      {BaseInfo.description}
+                    <p className='mt-6 text-sm md:text-base text-gray-500'>
+                      {BaseInfo.description} 
                     </p>
                     {/* Button */}
                     <button className='md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 

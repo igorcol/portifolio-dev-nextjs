@@ -2,7 +2,7 @@ export const BaseInfo = {
     name: "Igor",
     position: "Full Stack Web Developer &+",
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro numquam ad, vero consequuntur aperiam cumque voluptatum pariatur veniam? Qui facilis est ipsam odio cum!",
+        "Full Stack & Backend Developer specializing in RESTful APIs and scalable applications. Focused on clean code, performance, and seamless user experiences, using market-leading technologies to build efficient and innovative solutions. 🚀",
     profilePic: "/images/hero.png",
 };
 
