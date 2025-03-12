@@ -1,8 +1,10 @@
+"use client";
 import { navLinks } from "@/constant/constant";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import { checkScrollPosition } from "./utils/scrollHelper";
 
 // define props type
 type TProps = {
@@ -10,8 +12,15 @@ type TProps = {
 };
 
 const Nav = ({ openNav }: TProps) => {
+  const [navBg, setNavBg] = useState(false);
+
+  const bgColor = navBg ? 'bg-[#240b39]' : 'fixed'
+
+  //* Show nav BG when scrolled
+  useEffect(() =>  checkScrollPosition(setNavBg, 90), []);
+
   return (
-    <div className="fixed h-[10vh] w-full z-[10] bg-blue-950">
+    <div className={`fixed ${bgColor} h-[10vh] w-full z-[10] transition-all duration-200`}>
       <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
         {/* LOGO */}
         <Image
@@ -40,7 +49,10 @@ const Nav = ({ openNav }: TProps) => {
               Hire Me
             </button>
             {/* Burger */}
-            <HiBars3BottomRight onClick={openNav} className="w-8 h-8 cursor-pointer text-white lg:hidden" />
+            <HiBars3BottomRight
+              onClick={openNav}
+              className="w-8 h-8 cursor-pointer text-white lg:hidden"
+            />
           </div>
         </div>
       </div>
