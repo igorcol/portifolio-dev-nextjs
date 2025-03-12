@@ -19,6 +19,7 @@ const Nav = ({ openNav }: TProps) => {
   //* Show nav BG when scrolled
   useEffect(() =>  checkScrollPosition(setNavBg, 90), []);
 
+  //* -- Component -- *\\
   return (
     <div className={`fixed ${bgColor} h-[10vh] w-full z-[10] transition-all duration-200`}>
       <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
